@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mark Brizuela - CV</title>
+    <title>Mark Brizuela - Documents</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -25,6 +25,12 @@
             padding: 30px 20px;
         }
 
+        .section-title {
+            margin-top: 40px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
         .btn {
             display: inline-block;
             width: 100%;
@@ -35,27 +41,25 @@
             text-decoration: none;
             border-radius: 8px;
             transition: 0.3s ease;
-        }
-
-        .view-btn {
-            background: #2563eb;
             color: white;
         }
 
-        .view-btn:hover {
+        .cv-btn {
+            background: #2563eb;
+        }
+
+        .cv-btn:hover {
             background: #1e40af;
         }
 
-        .download-btn {
-            background: #10b981;
-            color: white;
+        .card-btn {
+            background: #f59e0b;
         }
 
-        .download-btn:hover {
-            background: #047857;
+        .card-btn:hover {
+            background: #b45309;
         }
 
-        /* Desktop PDF view */
         .pdf-viewer {
             display: none;
             width: 90%;
@@ -73,7 +77,6 @@
             border: none;
         }
 
-        /* Show embedded PDF only on bigger screens */
         @media (min-width: 768px) {
             .pdf-viewer {
                 display: block;
@@ -84,21 +87,41 @@
 <body>
 
 <header>
-    Mark Brizuela - Curriculum Vitae
+    Mark Brizuela - Professional Documents
 </header>
 
 <div class="container">
-    <a href="Mark Brizuela Resume.pdf" target="_blank" class="btn view-btn">
+
+    <div class="section-title">Curriculum Vitae</div>
+
+    <a href="Mark%20CV%20Ref.pdf" target="_blank" class="btn cv-btn">
         View CV
     </a>
 
-    <a href="Mark Brizuela Resume.pdf" download class="btn download-btn">
+    <a href="Mark%20CV%20Ref.pdf" download class="btn cv-btn">
         Download CV
     </a>
+
+    <div class="section-title">Calling Card</div>
+
+    <a href="Calling%20card.pdf" target="_blank" class="btn card-btn">
+        View Calling Card
+    </a>
+
+    <a href="Calling%20card.pdf" download class="btn card-btn">
+        Download Calling Card
+    </a>
+
+</div>
+
+<!-- Embedded view (Desktop only) -->
+
+<div class="pdf-viewer">
+    <iframe src="Mark%20CV%20Ref.pdf"></iframe>
 </div>
 
 <div class="pdf-viewer">
-    <iframe src="Mark Brizuela Resume.pdf"></iframe>
+    <iframe src="Calling%20card.pdf"></iframe>
 </div>
 
 </body>
